@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 import { UserButton, useUser } from '@clerk/nextjs';
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
-import app from './../../../../firebaseConfig';
+import app from '../../../../firebaseConfig';
 import TotalFileCard from './_components/TotalFileCard';
 import FileList from './_components/FileList';
 import Link from 'next/link';

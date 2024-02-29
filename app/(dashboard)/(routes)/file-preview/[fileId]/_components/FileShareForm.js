@@ -1,4 +1,4 @@
-import { Copy, CopyIcon } from 'lucide-react';
+import { Copy } from 'lucide-react';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 
@@ -7,7 +7,7 @@ function FileShareForm({ file, onPasswordSave }) {
   const [password, setPassword] = useState('');
   const onCopyClick = () => {
     navigator.clipboard.writeText(file.shortUrl);
-    toast.success('URL copied to clipboard')
+    toast.success('URL copied to clipboard');
   };
   return (
     file && (
@@ -81,8 +81,6 @@ function FileShareForm({ file, onPasswordSave }) {
             Send Email
           </button>
         </div>
-
-        {toast?.status ? <Toast toast={toast} closeToast={() => setToast(null)} /> : null}
       </div>
     )
   );
