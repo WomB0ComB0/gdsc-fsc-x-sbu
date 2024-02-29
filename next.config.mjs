@@ -14,12 +14,12 @@ const withPwa = pwa.default({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    dirs: ['.'],
-  },
   reactStrictMode: true,
-  compiler: {
-    removeConsole: false,
+  swcMinify: true,
+  output: 'export',
+  images: {
+    domains: ['firebasestorage.googleapis.com'],
+    unoptimized: true,
   },
 };
 
